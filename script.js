@@ -21,9 +21,15 @@ let gameNumberisNumber;
 let totalAtempt;
 
 const getTotalAtempt = function (a) {
-    return getTotalAtempt(a--);
+    if (a === 0) {
+        return a;
+    } else {
+        console.log(a);
+
+        return getTotalAtempt(a - 1);
+    }
 };
-console.log(getTotalAtempt(10));
+getTotalAtempt(10);
 const gameStart = function () {
     greeting = alert("Загадывание случайного числа от 1 до 100");
     gameExplanation = confirm("Ты хочешь угадать число от 1 до 100? У тебя есть только 10 попыток");
